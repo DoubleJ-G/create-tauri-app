@@ -143,7 +143,7 @@ const runInit = async (argv: Argv): Promise<void> => {
   const p = platform();
   const setupPlatform =
     p === "win32" ? "windows" : p === "darwin" ? "macos" : "linux";
-  const setupLink = `https://tauri.studio/docs/getting-started/setting-up-${setupPlatform}/`;
+  const setupLink = `https://tauri.studio/guides/getting-started/setup/${setupPlatform}`;
 
   // prettier-ignore
   console.log(
@@ -175,10 +175,10 @@ You may find the requirements here: ${cyan(setupLink)}
     pmName === "npm"
       ? new Npm(pmVer, { ci: argv.ci, log: argv.log })
       : pmName === "yarn"
-      ? new Yarn(pmVer, { ci: argv.ci, log: argv.log })
-      : pmName === "pnpm"
-      ? new Pnpm(pmVer, { ci: argv.ci, log: argv.log })
-      : null;
+        ? new Yarn(pmVer, { ci: argv.ci, log: argv.log })
+        : pmName === "pnpm"
+          ? new Pnpm(pmVer, { ci: argv.ci, log: argv.log })
+          : null;
   if (!packageManager)
     throw new Error(`Unsupported package manager: ${pmName}`);
 

@@ -1,5 +1,10 @@
 # Changelog
 
+## \[1.0.0-rc.4]
+
+- `create-tauri-app` will no longer install or prompt for `@tauri-apps/api` package in the `VanillaJs` recipe.
+  - [0c37e73](https://www.github.com/tauri-apps/create-tauri-app/commit/0c37e7382fabce0cff716069582309197ac60461) fix: don't install `@tauri-apps/api` for vanillajs on 2022-04-30
+
 ## \[1.0.0-rc.3]
 
 - - `create-tauri-app` handles different package managers usage better now.

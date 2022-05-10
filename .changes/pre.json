@@ -1,6 +1,7 @@
 {
   "tag": "rc",
   "changes": [
+    ".changes/dont-install-api-package-vanillajs.md",
     ".changes/going-rc.md",
     ".changes/version-aware-pm.md"
   ]
